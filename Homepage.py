@@ -113,6 +113,7 @@ if selected=="Projects" :
                          View project 1</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+          st.write("\n")
      with col2 :
           st_lottie(lottie_animation4,height=300,key="emotion")
      st.write("---")
@@ -136,6 +137,7 @@ if selected=="Projects" :
                          View project 2</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+          st.write("\n")
      with col2 :
           st_lottie(lottie_animation5,height=300,key="sort")
      st.write("---")
@@ -159,6 +161,7 @@ if selected=="Projects" :
                          View project 3</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+          st.write("\n")
      with col2 :
           st_lottie(lottie_animation6,height=300,key="cipher")
      col1,col2,col3 = st.columns(3)
@@ -199,6 +202,7 @@ if selected=="Achievement" :
                          View Leetcode profile</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+          st.write("\n")
      with col2 :
           st.image("Images/leetcode.png",width=200)
      st.write("---")
@@ -222,6 +226,7 @@ if selected=="Achievement" :
                          View GeeksforGeeks profile</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+          st.write("\n")
      with col2 :
           st.image("Images/GFG.png",width=200)
      st.write("---")
@@ -246,6 +251,7 @@ if selected=="Achievement" :
                          View Hackerrank profile</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+          st.write("\n")
      with col2 :
           st.image("Images/Hackerrank.png",width=200)
      st.write("---")
