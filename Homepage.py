@@ -266,6 +266,7 @@ with col1 :
                     Email</button></a>
                     '''
      st.markdown(button_html.format(email), unsafe_allow_html=True)
+     st.write("\n")
 with col2 :
      link_url = "https://www.linkedin.com/in/nikhilteja2621/"
      button_html = '''
@@ -274,6 +275,7 @@ with col2 :
                     LinkedIn</button></a>
                     '''
      st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+     st.write("\n")
 with col3 :
      link_url = "https://github.com/Nikhilteja21"
      button_html = '''
@@ -282,6 +284,7 @@ with col3 :
                     GitHub</button></a>
                     '''
      st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+     st.write("\n")
 with col4 :
      link_url = "https://twitter.com/NIKHIL2621"
      button_html = '''
@@ -290,3 +293,4 @@ with col4 :
                     Twitter</button></a>
                     '''
      st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+     st.write("\n")
