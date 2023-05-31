@@ -5,3 +5,4 @@ streamlit             ==  1.22.0
 streamlit-lottie      ==  0.0.3
 toml                  ==  0.10.2
 webencodings          ==  0.5.1
+streamlit_option_menu ==  0.1.0
