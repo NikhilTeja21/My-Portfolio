@@ -224,11 +224,11 @@ if selected=="Achievement" :
 
 # Contact Information
  
-col1, col2, col3 = st.columns([1, 3, 1])
+col1, col2, col3 = st.columns([2, 3, 1])
 col1.write("")
 col3.write("")
 with col2 :
-     st.markdown('<span style="color:white"><h2>Want to Contact me ?</h2></span>',unsafe_allow_html=True)
+     st.markdown('<span style="color:white"><h2><i>Want to Contact me ?</i></h2></span>',unsafe_allow_html=True)
 col1, col2, col3, col4 = st.columns([2, 2, 2, 2])
 with col1 :
      email = "nunenikhilteja@gmail.com"
