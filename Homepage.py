@@ -90,7 +90,7 @@ if selected == "Home" :
 
 if selected=="Projects" :
      with st.container() :
-          col1,col2,col3 = st.columns([1,3,1])
+          col1,col2,col3 = st.columns([2,3,1])
           with col2 : 
                st.markdown('<span><h1 style="color:lightgrey">My PROJECTS</h1></span>',unsafe_allow_html=True)
      st.write("---")
@@ -106,9 +106,13 @@ if selected=="Projects" :
                     - The image preprocessing is done before testing an image to the model that includes multiple substeps to normalize the image for image rotation correction, image resizing, and image cropping.
                     """
                )
-          if st.button("View project 1"):
-               link_url = "https://github.com/NikhilTeja21/Emotion_Detection"
-               webbrowser.open_new_tab(link_url)
+          link_url = "https://github.com/NikhilTeja21/Emotion_Detection"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View project 1</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
      with col2 :
           st_lottie(lottie_animation4,height=300,key="emotion")
      st.write("---")
@@ -125,9 +129,13 @@ if selected=="Projects" :
                     - the elements are sorted using the basic technique of comparison and swap. Finally, it merges all the elements together to get the final sorted list of data items.
                     """
                )
-          if st.button("View project 2"):
-               link_url = "https://github.com/NikhilTeja21/Merge-Sort-Visualisation"
-               webbrowser.open_new_tab(link_url)
+          link_url = "https://github.com/NikhilTeja21/Merge-Sort-Visualisation"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View project 2</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
      with col2 :
           st_lottie(lottie_animation5,height=300,key="sort")
      st.write("---")
@@ -144,23 +152,31 @@ if selected=="Projects" :
                     - A Caesar cipher with a shift of 1 would encode an A as a B, an M as an N, and a Z as an A, and so on.
                     """
                )
-          if st.button("View project 3"):
-               link_url = "https://github.com/NikhilTeja21/Ceaser-Cipher-algorithm"
-               webbrowser.open_new_tab(link_url)
+          link_url = "https://github.com/NikhilTeja21/Ceaser-Cipher-algorithm"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View project 3</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
      with col2 :
           st_lottie(lottie_animation6,height=300,key="cipher")
      col1,col2,col3 = st.columns(3)
      with col2 : 
-          if st.button("View all projects") :
-               link_url = "https://github.com/Nikhilteja21"
-               webbrowser.open_new_tab(link_url)
+          link_url = "https://github.com/Nikhilteja21"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View all projects</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
      st.write("---")
 
 # Acheivements
 
 if selected=="Achievement" :
      with st.container() :
-          col1,col2,col3 = st.columns([1,3,1])
+          col1,col2,col3 = st.columns([2,3,1])
           with col2 : 
                st.markdown('<span><h1 style="color:lightgrey">My ACHIEVEMENTS</h1></span>',unsafe_allow_html=True)
      st.write("---")
@@ -176,9 +192,13 @@ if selected=="Achievement" :
                - Badges : Binary Search
                """
           )
-          if st.button("View Leetcode profile") :
-               link_url = "https://leetcode.com/NIKHILTEJA/"
-               webbrowser.open_new_tab(link_url)
+          link_url = "https://leetcode.com/NIKHILTEJA/"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View Leetcode profile</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
      with col2 :
           st.image("Images/leetcode.png",width=200)
      st.write("---")
@@ -195,9 +215,13 @@ if selected=="Achievement" :
                - Institute Rank : 35
                """
           )
-          if st.button("View GeeksforGeeks profile") :
-               link_url = "https://auth.geeksforgeeks.org/user/nikhilteja21"
-               webbrowser.open_new_tab(link_url)
+          link_url = "https://auth.geeksforgeeks.org/user/nikhilteja21/"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View GeeksforGeeks profile</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
      with col2 :
           st.image("Images/GFG.png",width=200)
      st.write("---")
@@ -215,9 +239,13 @@ if selected=="Achievement" :
                - Functional, Object oriented programming and Data structures and algorithms.
                """
           )
-          if st.button("View Hackerrank profile") :
-               link_url = "https://www.hackerrank.com/_Nikhilteja_?hr_r=1"
-               webbrowser.open_new_tab(link_url)
+          link_url = "https://www.hackerrank.com/_Nikhilteja_/"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View Hackerrank profile</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
      with col2 :
           st.image("Images/Hackerrank.png",width=200)
      st.write("---")
@@ -232,17 +260,33 @@ with col2 :
 col1, col2, col3, col4 = st.columns([2, 2, 2, 2])
 with col1 :
      email = "nunenikhilteja@gmail.com"
-     if st.button("Email") :
-          webbrowser.open_new_tab(email)
+     button_html = '''
+                    <a href="{}" target="_blank">
+                    <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                    Email</button></a>
+                    '''
+     st.markdown(button_html.format(email), unsafe_allow_html=True)
 with col2 :
-     if st.button("LinkedIn"):
-               link_url = "https://www.linkedin.com/in/nikhilteja2621/"
-               webbrowser.open_new_tab(link_url)
+     link_url = "https://www.linkedin.com/in/nikhilteja2621/"
+     button_html = '''
+                    <a href="{}" target="_blank">
+                    <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                    LinkedIn</button></a>
+                    '''
+     st.markdown(button_html.format(link_url), unsafe_allow_html=True)
 with col3 :
-     if st.button("GitHub"):
-               link_url = "https://github.com/Nikhilteja21"
-               webbrowser.open_new_tab(link_url)
+     link_url = "https://github.com/Nikhilteja21"
+     button_html = '''
+                    <a href="{}" target="_blank">
+                    <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                    GitHub</button></a>
+                    '''
+     st.markdown(button_html.format(link_url), unsafe_allow_html=True)
 with col4 :
-     if st.button("Twitter"):
-               link_url = "https://twitter.com/NIKHIL2621"
-               webbrowser.open_new_tab(link_url)
+     link_url = "https://twitter.com/NIKHIL2621"
+     button_html = '''
+                    <a href="{}" target="_blank">
+                    <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                    Twitter</button></a>
+                    '''
+     st.markdown(button_html.format(link_url), unsafe_allow_html=True)
