@@ -1,0 +1,248 @@
+import streamlit as st
+import json
+import requests
+import webbrowser
+from streamlit_lottie import st_lottie
+from streamlit_option_menu import option_menu
+
+st.set_page_config(page_title='NIKHIL TEJA | My Portfolio',page_icon=":desktop_computer:",initial_sidebar_state="expanded",layout="wide")
+
+def load_lottiefile(filepath: str) :
+     with open(filepath,"r") as f :
+          return json.load(f)
+     
+def load_lottieurl(url) :
+    r = requests.get(url)
+    if r.status_code!=200 : return None
+    return r.json()
+
+lottie_animation1 = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_UBiAADPga8.json")
+lottie_animation2 = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_3rwasyjy.json")
+lottie_animation3 = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_4kx2q32n.json")
+lottie_animation4 = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_pq4zPRXkhF.json")
+lottie_animation5 = load_lottieurl("https://assets8.lottiefiles.com/private_files/lf30_4m4xa6he.json")
+lottie_animation6 = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_lzhv1mc4.json")
+
+selected = option_menu(
+        menu_title = None,
+        options = ["Home","Projects","Achievement"],
+        icons = ["house","book","trophy"],
+        menu_icon ="cast",
+        default_index=0,
+        orientation="horizontal",
+    )
+if selected == "Home" :
+
+# Insert Image and Write your name
+
+     with st.container() :
+          left1,middle1,right1 = st.columns(3)
+          with middle1 : 
+               st_lottie(lottie_animation1,height=300,key="programmer")
+     st.markdown(
+               '''<span lang="en">
+               <h2 style="color:lightgrey"><i>I am NIKHIL TEJA, an ASPIRING DEVELOPER</i></h2>
+               </span>''',
+               unsafe_allow_html=True
+               )
+     #st.markdown("# _I am NIKHIL TEJA, an ASPIRING DEVELOPER_")
+     st.write("---")
+
+# Programming languages
+
+     with st.container() :
+          first,second = st.columns(2)
+          with second : st_lottie(lottie_animation2,height=300,key="coding")
+          with first :
+               #st.markdown('<span style="color:red">This is red text</span>', unsafe_allow_html=True)
+               st.markdown('<span style="color:white"><h2><i>Programming Languages</i></h2></span>',unsafe_allow_html=True)
+               st.write(
+                    """I can able to code in various programming languages.
+                    Open to learn new languages and able to switch between programming languages quickly."""
+               )
+               """
+               - Python
+               - C++
+               - Java
+               - C
+               """
+     st.write("---")
+
+# Technologies
+
+     with st.container() :
+          left,right = st.columns(2)
+          with right :
+               st.markdown('<span style="color:white"><h2><i>Technologies</i></h2></span>',unsafe_allow_html=True)
+               st.write(
+                    """I'm familiar with Markup languages and scripts. 
+               I am flexible and adaptive in learning new technologies."""
+               )
+               """
+               - HTML
+               - CSS
+               - Javascript
+               """
+          with left : st_lottie(lottie_animation3,height=300,key="markup")  
+     st.write("---")
+
+# New Web 
+
+if selected=="Projects" :
+     with st.container() :
+          col1,col2,col3 = st.columns([1,3,1])
+          with col2 : 
+               st.markdown('<span><h1 style="color:lightgrey">My PROJECTS</h1></span>',unsafe_allow_html=True)
+     st.write("---")
+# 1st Project
+
+     st.markdown('<span style="color:white"><h2><i>1. Emotion Detection using Machine Learning</i></h2></span>',unsafe_allow_html=True)
+     col1,col2 = st.columns([4,2])
+     with col1 :
+          st.write(
+                    """
+                    - Emotion recognition is the task of machines trying to analyze, interpret and classify human emotion through the analysis of facial features.
+                    - The model detects emotion only when the person in the image is 70% accurate.
+                    - The image preprocessing is done before testing an image to the model that includes multiple substeps to normalize the image for image rotation correction, image resizing, and image cropping.
+                    """
+               )
+          if st.button("View project 1"):
+               link_url = "https://github.com/NikhilTeja21/Emotion_Detection"
+               webbrowser.open_new_tab(link_url)
+     with col2 :
+          st_lottie(lottie_animation4,height=300,key="emotion")
+     st.write("---")
+
+# 2nd Project
+
+     st.markdown('<span style="color:white"><h2><i>2. Merge sort visualization</i></h2></span>',unsafe_allow_html=True)
+     col1,col2 = st.columns([4,2])
+     with col1 :
+          st.write(
+                    """
+                    - The Merge Sort algorithm first iteratively divides the array into equal partitions until each partition reduces to a single element. Then it combines them in the same manner as they were divided in an ordered way.
+                    - It uses Divide and Conquer technique.
+                    - the elements are sorted using the basic technique of comparison and swap. Finally, it merges all the elements together to get the final sorted list of data items.
+                    """
+               )
+          if st.button("View project 2"):
+               link_url = "https://github.com/NikhilTeja21/Merge-Sort-Visualisation"
+               webbrowser.open_new_tab(link_url)
+     with col2 :
+          st_lottie(lottie_animation5,height=300,key="sort")
+     st.write("---")
+
+# 3rd Project
+
+     st.markdown('<span style="color:white"><h2><i>3. Ceaser cipher algorithm</i></h2></span>',unsafe_allow_html=True)
+     col1,col2 = st.columns([4,2])
+     with col1 :
+          st.write(
+                    """
+                    - In this all characters of plain text is replaced by other characters with same pattern.
+                    - A Caesar cipher is a simple method of encoding messages. Caesar ciphers use a substitution method where letters in the alphabet are shifted by some fixed number of spaces to yield an encoding alphabet. 
+                    - A Caesar cipher with a shift of 1 would encode an A as a B, an M as an N, and a Z as an A, and so on.
+                    """
+               )
+          if st.button("View project 3"):
+               link_url = "https://github.com/NikhilTeja21/Ceaser-Cipher-algorithm"
+               webbrowser.open_new_tab(link_url)
+     with col2 :
+          st_lottie(lottie_animation6,height=300,key="cipher")
+     col1,col2,col3 = st.columns(3)
+     with col2 : 
+          if st.button("View all projects") :
+               link_url = "https://github.com/Nikhilteja21"
+               webbrowser.open_new_tab(link_url)
+     st.write("---")
+
+# Acheivements
+
+if selected=="Achievement" :
+     with st.container() :
+          col1,col2,col3 = st.columns([1,3,1])
+          with col2 : 
+               st.markdown('<span><h1 style="color:lightgrey">My ACHIEVEMENTS</h1></span>',unsafe_allow_html=True)
+     st.write("---")
+# 1. Leetcode
+     col1,col2 = st.columns([5,1]) 
+     with col1 :
+          st.markdown('<span style="color:white"><h3><i>1. Leetcode profile</i></h3></span>',unsafe_allow_html=True)
+          st.write(
+               """
+               - NIKHILTEJA - LeetCode Profile
+               - Problems Solved : 150+.
+               - Languages : Python, Java, C++.
+               - Badges : Binary Search
+               """
+          )
+          if st.button("View Leetcode profile") :
+               link_url = "https://leetcode.com/NIKHILTEJA/"
+               webbrowser.open_new_tab(link_url)
+     with col2 :
+          st.image("Images/leetcode.png",width=200)
+     st.write("---")
+# 2. GeeksforGeeks
+     col1,col2 = st.columns([5,1]) 
+     with col1 :
+          st.markdown('<span style="color:white"><h3><i>2. GeeksforGeeks profile</i></h3></span>',unsafe_allow_html=True)
+          st.write(
+               """
+               - nikhilteja21 | GeeksforGeeks 
+               - Problem Solved : 100+.
+               - Data Structures & Algorithms, Basic Programming.
+               - Languages : Python, C++, Java, C.
+               - Institute Rank : 35
+               """
+          )
+          if st.button("View GeeksforGeeks profile") :
+               link_url = "https://auth.geeksforgeeks.org/user/nikhilteja21"
+               webbrowser.open_new_tab(link_url)
+     with col2 :
+          st.image("Images/GFG.png",width=200)
+     st.write("---")
+# 3. HackerRank
+     col1,col2 = st.columns([5,1]) 
+     with col1 :
+          st.markdown('<span style="color:white"><h3><i>3. HackerRank profile</i></h3></span>',unsafe_allow_html=True)
+          st.write(
+               """
+               - NIKHIL TEJA-HackerRank
+               - Badges : 
+                    - Gold   :- Python, C++, MySQL, Problem Solving.
+                    - Silver :- Java, C.
+               - Languages : Python, Java, C++, C, MySQL, Problem Solving. (5)
+               - Functional, Object oriented programming and Data structures and algorithms.
+               """
+          )
+          if st.button("View Hackerrank profile") :
+               link_url = "https://www.hackerrank.com/_Nikhilteja_?hr_r=1"
+               webbrowser.open_new_tab(link_url)
+     with col2 :
+          st.image("Images/Hackerrank.png",width=200)
+     st.write("---")
+
+# Contact Information
+ 
+col1, col2, col3 = st.columns([1, 3, 1])
+col1.write("")
+col3.write("")
+with col2 :
+     st.markdown('<span style="color:white"><h2>Want to Contact me ?</h2></span>',unsafe_allow_html=True)
+col1, col2, col3, col4 = st.columns([2, 2, 2, 2])
+with col1 :
+     email = "nunenikhilteja@gmail.com"
+     if st.button("Email") :
+          webbrowser.open_new_tab(email)
+with col2 :
+     if st.button("LinkedIn"):
+               link_url = "https://www.linkedin.com/in/nikhilteja2621/"
+               webbrowser.open_new_tab(link_url)
+with col3 :
+     if st.button("GitHub"):
+               link_url = "https://github.com/Nikhilteja21"
+               webbrowser.open_new_tab(link_url)
+with col4 :
+     if st.button("Twitter"):
+               link_url = "https://twitter.com/NIKHIL2621"
+               webbrowser.open_new_tab(link_url)
