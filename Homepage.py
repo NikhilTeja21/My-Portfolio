@@ -254,6 +254,16 @@ if selected=="Achievement" :
           st.write("\n")
      with col2 :
           st.image("Images/Hackerrank.png",width=200)
+     col1,col2,col3 = st.columns([2,1,2])
+     with col2 :
+          link_url = "https://flowcv.com/resume/ui7oiases6"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View My Resume</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+          st.write("\n\n\n")
      st.write("---")
 
 # Contact Information
@@ -263,16 +273,7 @@ col1.write("")
 col3.write("")
 with col2 :
      st.markdown('<span style="color:white"><h2><i>Want to Contact me ?</i></h2></span>',unsafe_allow_html=True)
-col1, col2, col3, col4 = st.columns([2, 2, 2, 2])
-with col1 :
-     email = "nunenikhilteja@gmail.com"
-     button_html = '''
-                    <a href="{}" target="_blank">
-                    <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
-                    Email</button></a>
-                    '''
-     st.markdown(button_html.format(email), unsafe_allow_html=True)
-     st.write("\n")
+col1, col2, col3, col4, col5 = st.columns([2, 2, 2, 2, 2])
 with col2 :
      link_url = "https://www.linkedin.com/in/nikhilteja2621/"
      button_html = '''
