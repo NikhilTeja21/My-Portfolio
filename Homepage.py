@@ -33,7 +33,7 @@ selected = option_menu(
     )
 if selected == "Home" :
 
-# Insert Image and Write your name
+# Insert animation
 
      with st.container() :
           left1,middle1,right1 = st.columns(3)
