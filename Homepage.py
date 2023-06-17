@@ -254,16 +254,6 @@ if selected=="Achievement" :
           st.write("\n")
      with col2 :
           st.image("Images/Hackerrank.png",width=200)
-     col1,col2,col3 = st.columns([2,1,2])
-     with col2 :
-          link_url = "https://flowcv.com/resume/ui7oiases6"
-          button_html = '''
-                         <a href="{}" target="_blank">
-                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
-                         View My Resume</button></a>
-                         '''
-          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
-          st.write("\n\n\n")
      st.write("---")
 # 4. Coding Ninjas
      col1,col2 = st.columns([5,1]) 
@@ -288,6 +278,16 @@ if selected=="Achievement" :
           st.write("\n")
      with col2 :
           st.image("Images/CodingNinjas.png",width=200)
+     col1,col2,col3 = st.columns([2,1,2])
+     with col2 :
+          link_url = "https://flowcv.com/resume/ui7oiases6"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View My Resume</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+          st.write("\n\n\n")
      st.write("---")
 
 # Contact Information
