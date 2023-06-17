@@ -287,7 +287,7 @@ if selected=="Achievement" :
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
           st.write("\n")
      with col2 :
-          st.image("Images/CodingNinja.png",width=200)
+          st.image("Images/CodingNinjas.png",width=200)
      st.write("---")
 
 # Contact Information
