@@ -265,6 +265,30 @@ if selected=="Achievement" :
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
           st.write("\n\n\n")
      st.write("---")
+# 4. Coding Ninjas
+     col1,col2 = st.columns([5,1]) 
+     with col1 :
+          st.markdown('<span style="color:white"><h3><i>4. Coding Ninjas profile</i></h3></span>',unsafe_allow_html=True)
+          st.write(
+               """
+               - Nikhilteja2621 | Coding ninjas
+               - Languages : Python, C++, Java, C.
+               - Badges : Ronin, Expert(level-7).
+               - Problem Solved : 300+.
+               - Data Structures & Algorithms, Greedy.
+               """
+          )
+          link_url = "https://www.codingninjas.com/codestudio/profile/NikhilTeja2621"
+          button_html = '''
+                         <a href="{}" target="_blank">
+                         <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                         View Coding Ninjas profile</button></a>
+                         '''
+          st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+          st.write("\n")
+     with col2 :
+          st.image("Images/CodingNinja.png",width=200)
+     st.write("---")
 
 # Contact Information
  
