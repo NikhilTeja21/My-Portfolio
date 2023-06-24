@@ -191,7 +191,7 @@ if selected=="Achievement" :
           st.write(
                """
                - NIKHILTEJA - LeetCode Profile
-               - Problems Solved : 150+.
+               - Problems Solved : 200+.
                - Languages : Python, Java, C++.
                - Badges : Binary Search
                """
