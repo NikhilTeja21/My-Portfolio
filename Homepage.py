@@ -45,7 +45,7 @@ if selected == "Home" :
                </span>''',
                unsafe_allow_html=True
                )
-     st.write("""Hello, I'm Nikhil Teja, an enthusiastic and dedicated aspiring web developer passionate about creating user-friendly websites. With HTML, CSS, and JavaScript, I strive to combine my creative skills with technical knowledge to develop engaging web experiences.""")
+     # st.write("""Hello, I'm Nikhil Teja, an enthusiastic and dedicated aspiring web and software developer passionate about creating user-friendly websites. With HTML, CSS, and JavaScript, I strive to combine my creative skills with technical knowledge to develop engaging web experiences.""")
      #st.markdown("# _I am NIKHIL TEJA, an ASPIRING DEVELOPER_")
      st.write("---")
 
