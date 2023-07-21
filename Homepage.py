@@ -19,7 +19,7 @@ def load_lottieurl(url) :
 lottie_animation1 = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_UBiAADPga8.json")
 lottie_animation2 = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_3rwasyjy.json")
 lottie_animation3 = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_4kx2q32n.json")
-lottie_animation4 = load_lottieurl("https://assets8.lottiefiles.com/packages/lf20_pq4zPRXkhF.json")
+lottie_animation4 = load_lottieurl("https://lottie.host/4cf33772-1b94-48ce-aa9d-7811a11d5b06/RwE7dduW3j.json")
 lottie_animation5 = load_lottieurl("https://assets8.lottiefiles.com/private_files/lf30_4m4xa6he.json")
 lottie_animation6 = load_lottieurl("https://assets3.lottiefiles.com/packages/lf20_lzhv1mc4.json")
 
@@ -97,17 +97,17 @@ if selected=="Projects" :
      st.write("---")
 # 1st Project
 
-     st.markdown('<span style="color:white"><h2><i>1. Emotion Detection using Machine Learning</i></h2></span>',unsafe_allow_html=True)
+     st.markdown('<span style="color:white"><h2><i>1. Voice Based Email System</i></h2></span>',unsafe_allow_html=True)
      col1,col2 = st.columns([4,2])
      with col1 :
           st.write(
                     """
-                    - Emotion recognition is the task of machines trying to analyze, interpret and classify human emotion through the analysis of facial features.
-                    - The model detects emotion only when the person in the image is 70% accurate.
-                    - The image preprocessing is done before testing an image to the model that includes multiple substeps to normalize the image for image rotation correction, image resizing, and image cropping.
+                    - One of the most used forms of communication among people is Email. A lot of confidential and urgent information is exchanged over emails in today’s time.
+                    - Voice-based Email System using AI that will make the email system very easily accessible to also visually challenged people and also help society.
+                    - Accessibility is the most important feature that is considered while developing this system.
                     """
                )
-          link_url = "https://github.com/NikhilTeja21/Emotion_Detection"
+          link_url = "https://github.com/NikhilTeja21/Virtual-Assistance-For-The-Blind"
           button_html = '''
                          <a href="{}" target="_blank">
                          <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
@@ -116,7 +116,7 @@ if selected=="Projects" :
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
           st.write("\n")
      with col2 :
-          st_lottie(lottie_animation4,height=300,key="emotion")
+          st_lottie(lottie_animation4,height=300,key="voice")
      st.write("---")
 
 # 2nd Project
