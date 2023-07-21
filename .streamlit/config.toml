@@ -1,7 +1,7 @@
 # primaryColor="#1f2db1"
-backgroundColor="#222527"
-secondaryBackgroundColor="#1a2c41"
-textColor="#fdfdfb"
+# backgroundColor="#222527"
+# secondaryBackgroundColor="#1a2c41"
+# textColor="#fdfdfb"
 
 [theme]
 base="dark"
