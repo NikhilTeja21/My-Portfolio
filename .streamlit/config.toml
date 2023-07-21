@@ -1,13 +1,8 @@
-# [theme]
-# base="dark"
-# primaryColor="#123983"
-# font="serif"
-[theme]
 # primaryColor="#1f2db1"
 backgroundColor="#222527"
 secondaryBackgroundColor="#1a2c41"
 textColor="#fdfdfb"
 
-# [theme]
+[theme]
 base="dark"
 primaryColor="#123983"
