@@ -102,7 +102,7 @@ if selected=="Projects" :
      with col1 :
           st.write(
                     """
-                    - One of the most used forms of communication among people is Email. A lot of confidential and urgent information is exchanged over emails in today’s time.
+                    - Voice based email system makes us to send emails using our voice, from login authentication to compose, check inbox, trash, view sent mails using voice by running the source file.
                     - Voice-based Email System using AI that will make the email system very easily accessible to also visually challenged people and also help society.
                     - Accessibility is the most important feature that is considered while developing this system.
                     """
