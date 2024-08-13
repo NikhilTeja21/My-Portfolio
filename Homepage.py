@@ -373,6 +373,17 @@ if selected=="Experience" :
                April, 2024 - Present
                """
           )
+     with col2 :
+          st.markdown('<span style="color:white"><h4><i>Skills</i></h4></span>',unsafe_allow_html=True)
+          st.write(
+               """
+               - Machine learning & Deep learning
+               - Natural language processing
+               - Data Preprocessing
+               - Image Preprocessing
+               - Computer vision(cv2).
+               """
+          )
      st.write("---")
 
 # 2. Eizen.AI
@@ -385,6 +396,17 @@ if selected=="Experience" :
                Augest, 2023 - October, 2023
                """
           )
+     with col2 :
+          st.markdown('<span style="color:white"><h4><i>Skills</i></h4></span>',unsafe_allow_html=True)
+          st.write(
+               """
+               - Yolo v4, v5.
+               - Computer vision
+               - FastAPI
+               - MongoDB
+               - MoviePY
+               """
+          )
      st.write("---")
 
 # 3. Suntek Corp Solution Pvt Ltd
@@ -395,6 +417,17 @@ if selected=="Experience" :
           st.write(
                """
                March, 2023 - July, 2023
+               """
+          )
+     with col2 :
+          st.markdown('<span style="color:white"><h4><i>Skills</i></h4></span>',unsafe_allow_html=True)
+          st.write(
+               """
+               - Python
+               - Java OOP's
+               - Data Structures and Algorithms
+               - Problem Solving
+               - Teaching
                """
           )
      st.write("---")
