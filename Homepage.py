@@ -16,7 +16,8 @@ def load_lottieurl(url) :
     if r.status_code!=200 : return None
     return r.json()
 
-lottie_animation1 = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_UBiAADPga8.json")
+lottie_animation1 = load_lottieurl("https://lottie.host/d876a981-1ef8-48b1-96c1-3202935c7915/46ZQmOqS48.json")
+# lottie_animation1 = load_lottieurl("https://assets4.lottiefiles.com/packages/lf20_UBiAADPga8.json")
 lottie_animation2 = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_3rwasyjy.json")
 lottie_animation3 = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_4kx2q32n.json")
 lottie_animation4 = load_lottieurl("https://lottie.host/4cf33772-1b94-48ce-aa9d-7811a11d5b06/RwE7dduW3j.json")
@@ -28,8 +29,8 @@ lottie_animation9 = load_lottieurl("https://lottie.host/e868e4c1-17ae-413f-8713-
 
 selected = option_menu(
         menu_title = None,
-        options = ["Home","Projects","Achievement","Experience"],
-        icons = ["house","book","trophy","briefcase"],
+        options = ["Home","Experience","Projects","Achievement"],
+        icons = ["house","briefcase","book","trophy"],
         menu_icon ="cast",
         default_index=0,
         orientation="horizontal",
@@ -39,14 +40,22 @@ if selected == "Home" :
 # Insert animation
 
      with st.container() :
-          left1,middle1,right1 = st.columns(3)
-          with middle1 : 
+          left1,right1 = st.columns(2)
+          with right1 : 
                st_lottie(lottie_animation1,height=300,key="programmer")
-     st.markdown(
-               '''<span lang="en">
-               <h2 style="color:lightgrey"><i>I am NIKHIL TEJA, Junior Software Developer</i></h2>
-               </span>''',
-               unsafe_allow_html=True
+          with left1 :
+               st.markdown(
+                         '''<span lang="en">
+                         <h2 style="color:lightgrey"><i>I'm NIKHIL TEJA, Junior Software Developer</i></h2>
+                         </span>''',
+                         unsafe_allow_html=True
+                         )
+               st.write('\n\n')
+               st.write(
+                    """
+                    As a passionate Junior Software Developer specializing in AI & ML, I am dedicated to exploring the vast potential of artificial intelligence. 
+                    With a strong foundation in machine learning algorithms and a keen interest in building intelligent systems, I strive to create solutions that are both innovative and impactful.
+                    """
                )
      # st.write("""Hello, I'm Nikhil Teja, an enthusiastic and dedicated aspiring web and software developer passionate about creating user-friendly websites. With HTML, CSS, and JavaScript, I strive to combine my creative skills with technical knowledge to develop engaging web experiences.""")
      #st.markdown("# _I am NIKHIL TEJA, an ASPIRING DEVELOPER_")
@@ -113,10 +122,9 @@ if selected=="Projects" :
           button_html = '''
                          <a href="{}" target="_blank">
                          <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
-                         View project 1</button></a>
+                         View project</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
-          st.write("\n")
      with col2 :
           st_lottie(lottie_animation7,height=300,key="receipt")
      st.write("---")
@@ -140,10 +148,9 @@ if selected=="Projects" :
           button_html = '''
                          <a href="{}" target="_blank">
                          <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
-                         View project 2</button></a>
+                         View project</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
-          st.write("\n")
      with col1 :
           st_lottie(lottie_animation8,height=300,key="abusive")
      st.write("---")
@@ -162,10 +169,9 @@ if selected=="Projects" :
           button_html = '''
                          <a href="{}" target="_blank">
                          <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
-                         View project 3</button></a>
+                         View project</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
-          st.write("\n")
      with col2 :
           st_lottie(lottie_animation9,height=300,key="emotion")
      st.write("---")
@@ -186,10 +192,9 @@ if selected=="Projects" :
           button_html = '''
                          <a href="{}" target="_blank">
                          <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
-                         View project 4</button></a>
+                         View project</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
-          st.write("\n")
      with col1 :
           st_lottie(lottie_animation4,height=300,key="voice")
      st.write("---")
@@ -210,10 +215,9 @@ if selected=="Projects" :
           button_html = '''
                          <a href="{}" target="_blank">
                          <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
-                         View project 5</button></a>
+                         View project</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
-          st.write("\n")
      with col2 :
           st_lottie(lottie_animation5,height=300,key="sort")
      st.write("---")
@@ -234,10 +238,9 @@ if selected=="Projects" :
           button_html = '''
                          <a href="{}" target="_blank">
                          <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
-                         View project 6</button></a>
+                         View project</button></a>
                          '''
           st.markdown(button_html.format(link_url), unsafe_allow_html=True)
-          st.write("\n")
      with col1 :
           st_lottie(lottie_animation6,height=300,key="cipher")
      st.write("---")
@@ -434,11 +437,21 @@ if selected=="Experience" :
 
 # Contact Information
  
-col1, col2, col3 = st.columns([2, 2, 2])
+col1, col2, col3 = st.columns([3, 3, 2])
 with col2 :
      st.markdown('<span style="color:white"><h2><i>Want to Contact me ?</i></h2></span>',unsafe_allow_html=True)
-col1, col2, col3, col4, col5 = st.columns([2, 2, 2, 2, 2])
+col1, col2, col3, col4, col5 = st.columns([2,2,2,2,1])
+
 with col2 :
+     link_url = "mailto:nunenikhilteja@gmail.com"
+     button_html = '''
+                    <a href="{}" target="_blank">
+                    <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
+                    Email</button></a>
+                    '''
+     st.markdown(button_html.format(link_url), unsafe_allow_html=True)
+     st.write("\n")
+with col3 :
      link_url = "https://www.linkedin.com/in/nikhilteja2621/"
      button_html = '''
                     <a href="{}" target="_blank">
@@ -447,21 +460,12 @@ with col2 :
                     '''
      st.markdown(button_html.format(link_url), unsafe_allow_html=True)
      st.write("\n")
-with col3 :
+with col4:
      link_url = "https://github.com/Nikhilteja21"
      button_html = '''
                     <a href="{}" target="_blank">
                     <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
                     GitHub</button></a>
-                    '''
-     st.markdown(button_html.format(link_url), unsafe_allow_html=True)
-     st.write("\n")
-with col4 :
-     link_url = "https://instagram.com/n.nikhil_teja"
-     button_html = '''
-                    <a href="{}" target="_blank">
-                    <button style="padding: 5px 15px; background-color: #071114; color: white; border: outset; cursor: pointer;">
-                    Instagram</button></a>
                     '''
      st.markdown(button_html.format(link_url), unsafe_allow_html=True)
      st.write("\n")
